@@ -1,10 +1,22 @@
+
+
 var upperDateLimit = 0;
 var lowerDateLimit = 0;
+
+// var booster = new ScrollBooster({
+//   viewport: document.querySelector('#main-container'),
+//   scrollMode: 'transform'
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
   setUpCurrentDateScreen();
   parent = document.getElementById('main-container');
   elems = document.getElementsByClassName('month-container');
+  // var booster = new ScrollBooster({
+  //   viewport: document.querySelector('body'),
+  //   content: document.querySelector('#main-container'),
+  //   scrollMode: 'transform'
+  // });
   parent.scrollTo(elems[0].getBoundingClientRect().width * 2, 0);
   parent.addEventListener('scroll',function() {
     scrollLeft = parent.scrollLeft;
